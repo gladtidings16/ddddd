@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverside Academy - K-12 Private Education Excellence</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <!-- Logo -->
+                <a href="#" class="logo">
+                    <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 28h24v8H8z" fill="#4A90D9"/>
+                        <path d="M10 12l10-8 10 8v12H10z" fill="#123A6B" stroke="#4A90D9" stroke-width="1.5"/>
+                        <circle cx="20" cy="18" r="2" fill="#4A90D9"/>
+                    </svg>
+                    <span class="logo-text">Riverside</span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="nav-links desktop">
+                    <a href="#about">About</a>
+                    <a href="#academics">Academics</a>
+                    <a href="#admissions">Admissions</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <!-- Apply Button -->
+                <a href="#admissions" class="btn btn-primary desktop">Apply Now</a>
+
+                <!-- Hamburger Menu -->
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+
+            <!-- Mobile Nav -->
+            <div class="mobile-nav">
+                <a href="#about">About</a>
+                <a href="#academics">Academics</a>
+                <a href="#admissions">Admissions</a>
+                <a href="#contact">Contact</a>
+                <a href="#admissions" class="btn btn-primary">Apply Now</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Quality Education for a Brighter Future</h1>
+                <p class="hero-subtitle">Riverside Academy nurtures curious minds and develops character in our students through rigorous academics and transformative experiences.</p>
+                <div class="hero-ctas">
+                    <a href="#admissions" class="btn btn-primary">Apply for Admission</a>
+                    <a href="#about" class="btn btn-secondary">Learn About Us</a>
+                </div>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span class="counter" data-target="8">0</span>:<span class="counter" data-target="1">0</span>
+                        </div>
+                        <div class="stat-label">Student-Teacher Ratio</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span class="counter" data-target="98">0</span>%
+                        </div>
+                        <div class="stat-label">College Acceptance Rate</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">
+                            <span class="counter" data-target="28">0</span>
+                        </div>
+                        <div class="stat-label">Years of Excellence</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SVG Illustration -->
+            <div class="hero-illustration">
+                <svg viewBox="0 0 200 240" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Building body -->
+                    <rect x="40" y="80" width="120" height="110" fill="#1B5A9E" stroke="#123A6B" stroke-width="2"/>
+                    
+                    <!-- Roof -->
+                    <polygon points="40,80 100,20 160,80" fill="#123A6B" stroke="#123A6B" stroke-width="2"/>
+                    <polygon points="45,80 100,35 155,80" fill="none" stroke="#4A90D9" stroke-width="1.5"/>
+                    
+                    <!-- Flagpole -->
+                    <line x1="100" y1="20" x2="100" y2="5" stroke="#1F2933" stroke-width="2"/>
+                    <polygon points="100,5 105,10 95,10" fill="#4A90D9"/>
+                    
+                    <!-- Windows (grid) -->
+                    <g fill="none" stroke="#4A90D9" stroke-width="1.5">
+                        <!-- Left column -->
+                        <rect x="55" y="95" width="18" height="18"/>
+                        <rect x="55" y="125" width="18" height="18"/>
+                        <rect x="55" y="155" width="18" height="18"/>
+                        <!-- Middle column -->
+                        <rect x="91" y="95" width="18" height="18"/>
+                        <rect x="91" y="125" width="18" height="18"/>
+                        <rect x="91" y="155" width="18" height="18"/>
+                        <!-- Right column -->
+                        <rect x="127" y="95" width="18" height="18"/>
+                        <rect x="127" y="125" width="18" height="18"/>
+                        <rect x="127" y="155" width="18" height="18"/>
+                    </g>
+                    
+                    <!-- Door -->
+                    <rect x="91" y="175" width="18" height="25" fill="#123A6B" stroke="#4A90D9" stroke-width="1.5"/>
+                    <circle cx="106" cy="187" r="1.5" fill="#4A90D9"/>
+                    
+                    <!-- Ground -->
+                    <line x1="20" y1="200" x2="180" y2="200" stroke="#1B5A9E" stroke-width="3"/>
+                    <rect x="20" y="200" width="160" height="40" fill="#1B5A9E" opacity="0.3"/>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>Founded in 1996, Riverside Academy has been a cornerstone of Nursery to Senior Secondary excellence in our community. We combine rigorous academics with a commitment to developing the whole child—fostering critical thinking, creativity, collaboration, and compassion.</p>
+                    <p>Our dedicated faculty, small class sizes, and personalized attention ensure every student receives the support and challenge they need to thrive. We prepare students not just for college, but for meaningful lives of impact and purpose.</p>
+                    <!-- Drop your own classroom photo at images/classroom.jpg -->
+                    <img class="about-image" src="images/classroom.jpg" alt="Nigerian secondary school students learning together in a classroom" width="100%" height="auto" loading="lazy" style="border-radius: 4px; object-fit: cover;">
+                </div>
+
+                <div class="core-values">
+                    <h3>Our Core Values</h3>
+                    <div class="values-list">
+                        <div class="value-item">
+                            <div class="value-number">1</div>
+                            <div class="value-content">
+                                <h4>Academic Excellence</h4>
+                                <p>We maintain rigorous standards and encourage intellectual curiosity through challenging coursework and innovative teaching methods.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-number">2</div>
+                            <div class="value-content">
+                                <h4>Character Development</h4>
+                                <p>Beyond the classroom, we nurture ethical leadership, integrity, and a commitment to serving others with honor and respect.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <div class="value-number">3</div>
+                            <div class="value-content">
+                                <h4>Inclusive Community</h4>
+                                <p>We celebrate diversity and foster belonging for every student, creating an environment where all voices are heard and valued.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academics Section -->
+    <section id="academics" class="academics fade-in">
+        <div class="container">
+            <h2>Our Academic Programs</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3>Nursery / Early Years</h3>
+                    <p class="program-grades">Ages 2–5</p>
+                    <p class="program-description">Early literacy, numeracy, and social skills taught through play, songs, and guided exploration.</p>
+                </div>
+                <!-- Drop your own photo at images/primary.jpg -->
+                <div class="program-card">
+                    <img class="program-img" src="images/schools .jpg.jpg" alt="Primary school pupils raising their hands during a lesson" width="100%" height="200" object-fit="cover" object-position="center" loading="lazy" style="display:block; border-radius:4px;">
+                    <h3>Primary School</h3>
+                    <p class="program-grades">Primary 1–6</p>
+                    <p class="program-description">A strong foundation in English, Mathematics, Basic Science, and Social Studies, with an emphasis on reading fluency and curiosity.</p>
+                </div>
+                <div class="program-card">
+                    <h3>Junior Secondary School</h3>
+                    <p class="program-grades">JSS 1–3</p>
+                    <p class="program-description">Broad coursework across sciences, languages, and vocational subjects, preparing students for the BECE.</p>
+                </div>
+                <!-- Drop your own photo at images/secondary.jpg -->
+                <div class="program-card">
+                    <img class="program-img" src="images/school .jpg.jpg" alt="Senior secondary students during an ICT lesson in the computer lab" width="100%" height="200" object-fit="cover" object-position="center" loading="lazy" style="display:block; border-radius:4px;">
+                    <h3>Senior Secondary School</h3>
+                    <p class="program-grades">SSS 1–3</p>
+                    <p class="program-description">Specialised Science, Arts, and Commercial tracks with focused preparation for WAEC, NECO, and JAMB.</p>
+                </div>
+            </div>
+            <!-- Drop your own assembly-ground photo at images/assembly.jpg -->
+            <img class="academics-image" src="images/assembly.jpg" alt="Nigerian secondary school students lined up on the assembly ground" width="100%" height="auto" loading="lazy" style="border-radius: 4px; object-fit: cover;">
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials fade-in">
+        <div class="testimonials-container">
+            <div class="testimonial-content">
+                <blockquote class="testimonial-quote">
+                    "Riverside Academy has transformed my daughter's confidence and academic trajectory. The teachers genuinely know each student, and that personalized attention makes all the difference. We're grateful for the values-based education and the strong sense of community here."
+                </blockquote>
+                <div class="testimonial-author">— Parent, Riverside Academy</div>
+            </div>
+
+            <div class="carousel-controls">
+                <button class="carousel-btn prev" aria-label="Previous testimonial">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 16L6 10L12 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="carousel-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                </div>
+                <button class="carousel-btn next" aria-label="Next testimonial">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8 16L14 10L8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Hidden testimonial data for carousel -->
+            <div class="carousel-data" style="display: none;">
+                <div class="slide">
+                    <blockquote>"Riverside Academy has transformed my daughter's confidence and academic trajectory. The teachers genuinely know each student, and that personalized attention makes all the difference. We're grateful for the values-based education and the strong sense of community here."</blockquote>
+                    <p class="author">— Parent, Riverside Academy</p>
+                </div>
+                <div class="slide">
+                    <blockquote>"My son came to Riverside struggling with traditional schooling. Within a year, he had discovered a love of learning and joined the robotics team. The supportive environment and innovative teaching have been transformative."</blockquote>
+                    <p class="author">— Parent, Riverside Academy</p>
+                </div>
+                <div class="slide">
+                    <blockquote>"As educators, we're impressed by the intellectual rigor and the genuine care the Riverside team shows every student. It's rare to find a school that truly walks the walk on their mission."</blockquote>
+                    <p class="author">— Fellow educator</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Admissions Section -->
+    <section id="admissions" class="admissions fade-in">
+        <div class="container admissions-container">
+            <div class="admissions-process">
+                <h2>How to Apply</h2>
+                <div class="process-steps">
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Schedule a Tour</h4>
+                            <p>Visit Riverside and experience our community firsthand. Tour the campus, meet faculty and current students, and see where learning comes alive.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Submit Application</h4>
+                            <p>Complete our online application with your student's information, academic history, and a personal statement about your educational goals.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Admissions Interview</h4>
+                            <p>Meet with our admissions team for a discussion about your academic interests, extracurricular activities, and why Riverside is the right fit.</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Enrollment</h4>
+                            <p>Upon acceptance, finalize your enrollment, complete the welcome documentation, and get ready to join the Riverside Academy community.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admissions-highlight">
+                <div class="highlight-card">
+                    <h3>Application Deadline</h3>
+                    <p class="deadline-date">March 15, 2025</p>
+                    <p class="deadline-text">Rolling admissions accepted through May 31. Early applications receive priority consideration.</p>
+                    <a href="#contact" class="btn btn-primary">Start Your Application</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <div class="container contact-container">
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="info-block">
+                    <h4>Address</h4>
+                    <p>3, Danjuma Street, Sango, Ilorin, Kwara State, 240101</p>
+                </div>
+                <div class="info-block">
+                    <h4>Phone</h4>
+                    <p><a href="tel:+2349155149831" data-contact="phone" data-contact-link="phone">09155149831</a></p>
+                </div>
+                <div class="info-block">
+                    <h4>Email</h4>
+                    <p><a href="mailto:mubashirahabdurrahman@gmail.com" data-contact="email" data-contact-link="email">mubashirahabdurrahman@gmail.com</a></p>
+               </div>
+                <div class="info-block">
+                    <h4>Hours</h4>
+                    <p>Monday–Friday: 8:00 AM – 4:00 PM<br>Saturday & Sunday: Closed</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h3>Send us a Message</h3>
+                <form action="https://formspree.io/f/xyeeewey" method="POST" class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                        <span class="error-message" data-field="name"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" data-field="email"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <span class="error-message" data-field="message"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                    <div class="form-success" style="display: none;">
+                        <p>✓ Thank you for your message. We'll be in touch soon!</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <svg class="logo-mark" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8 28h24v8H8z" fill="#4A90D9"/>
+                    <path d="M10 12l10-8 10 8v12H10z" fill="#123A6B" stroke="#4A90D9" stroke-width="1.5"/>
+                    <circle cx="20" cy="18" r="2" fill="#4A90D9"/>
+                </svg>
+                <p class="footer-tagline">Riverside Academy — Building futures through education</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h5>Explore</h5>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#academics">Academics</a></li>
+                        <li><a href="#admissions">Admissions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Community</h5>
+                    <ul>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Athletics</a></li>
+                        <li><a href="#">News & Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">Parent Portal</a></li>
+                        <li><a href="#">Faculty Access</a></li>
+                        <li><a href="#">Calendar</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Riverside Academy. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="contact-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
