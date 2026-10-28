@@ -228,99 +228,49 @@ if (contactForm) {
         });
     });
 
-    // Form submission
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+   // Form submission
+contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-        // Validate all fields
-        let allValid = true;
-        inputs.forEach(input => {
-            if (!validateField(input)) {
-                allValid = false;
+    // Validate all fields
+    let allValid = true;
+    inputs.forEach(input => {
+        if (!validateField(input)) {
+            allValid = false;
+        }
+    });
+
+    if (allValid) {
+        // Send data to Formspree via fetch
+        const formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
             }
+        }).then(response => {
+            if (response.ok) {
+                // Show success message
+                const successDiv = contactForm.querySelector('.form-success');
+                successDiv.style.display = 'block';
+
+                // Reset form
+                contactForm.reset();
+
+                // Clear success message after 5 seconds
+                setTimeout(() => {
+                    successDiv.style.display = 'none';
+                }, 5000);
+            } else {
+                alert('Oops! There was a problem submitting your form.');
+            }
+        }).catch(error => {
+            alert('Oops! There was a network error.');
         });
-
-        if (allValid) {
-            // Show success message
-            const successDiv = contactForm.querySelector('.form-success');
-            successDiv.style.display = 'block';
-
-            // Reset form
-            contactForm.reset();
-
-            // Clear success message after 5 seconds
-            setTimeout(() => {
-                successDiv.style.display = 'none';
-            }, 5000);
-
-            // Optional: Log form data (in a real app, this would be sent to a server)
-            console.log('Form submitted with data:', {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            });
-        }
-    });
-}
-
-/* ============================================
-   SMOOTH SCROLL ANCHOR LINKS
-   ============================================ */
-
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        
-        // Skip if it's just "#" or if it's the hamburger menu trigger
-        if (href === '#' || this.classList.contains('logo')) {
-            return;
-        }
-
-        const target = document.querySelector(href);
-        if (target) {
-            e.preventDefault();
-            
-            // Account for sticky header height
-            const headerHeight = document.querySelector('.header').offsetHeight;
-            const targetPosition = target.offsetTop - headerHeight;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
+    }
 });
 
-/* ============================================
-   KEYBOARD NAVIGATION
-   ============================================ */
-
-// Ensure all interactive elements are keyboard accessible
-document.addEventListener('DOMContentLoaded', () => {
-    // Add keyboard navigation for carousel
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft' && prevBtn) {
-            prevBtn.click();
-        } else if (e.key === 'ArrowRight' && nextBtn) {
-            nextBtn.click();
-        }
-    });
-});
-
-function updateSchoolContact() {
-    document.querySelectorAll('[data-contact="phone"]').forEach(element => {
-        element.textContent = SCHOOL_CONTACT.phone;
-    });
-    document.querySelectorAll('[data-contact="email"]').forEach(element => {
-        element.textContent = SCHOOL_CONTACT.email;
-    });
-    document.querySelectorAll('[data-contact-link="phone"]').forEach(element => {
-        element.href = 'tel:' + SCHOOL_CONTACT.phoneLink;
-    });
-    document.querySelectorAll('[data-contact-link="email"]').forEach(element => {
-        element.href = 'mailto:' + SCHOOL_CONTACT.email;
-    });
 }
 
 document.addEventListener('DOMContentLoaded', updateSchoolContact);
